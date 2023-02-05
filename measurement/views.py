@@ -11,7 +11,7 @@ class CreateSensorView(generics.ListCreateAPIView):
 
 
 class SensorChange(generics.RetrieveUpdateAPIView):
-    """Класс позволяет получить данные конкретного датчика с температурами"""  # не работает - не показывает т-ры.
+    """Класс позволяет получить данные конкретного датчика с температурами"""
     queryset = Sensor.objects.all()
     serializer_class = SensorDetailSerializer
 

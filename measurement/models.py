@@ -11,5 +11,5 @@ class Measurement(models.Model):
     """Модель измерения температуры с указанием id датчика-измерителя"""
     temperature = models.FloatField()
     created_at = models.DateTimeField(auto_now_add=True)
-    sensor_id = models.ForeignKey(Sensor, on_delete=models.CASCADE, default=None)
+    sensor_id = models.ForeignKey(Sensor, on_delete=models.CASCADE, default=None, related_name='measurements')
 
