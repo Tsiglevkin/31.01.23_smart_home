@@ -12,4 +12,5 @@ class Measurement(models.Model):
     temperature = models.FloatField()
     created_at = models.DateTimeField(auto_now_add=True)
     sensor_id = models.ForeignKey(Sensor, on_delete=models.CASCADE, default=None, related_name='measurements')
+    picture = models.ImageField(default=None, null=True)  # добавил поле с картинкой.
 

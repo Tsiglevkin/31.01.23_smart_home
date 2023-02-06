@@ -11,9 +11,11 @@ class SensorSerializer(serializers.ModelSerializer):
 
 class MeasurementSerializer(serializers.ModelSerializer):
     """Этот сериалайзер обрабатывает измерения температуры"""
+    picture = serializers.ImageField(allow_empty_file=True, allow_null=True)  # добавил поле с картинкой.
+
     class Meta:
         model = Measurement
-        fields = ['sensor_id', 'temperature', 'created_at']
+        fields = ['sensor_id', 'temperature', 'created_at', 'picture']
 
 
 class SensorDetailSerializer(serializers.ModelSerializer):
